@@ -1,22 +1,32 @@
 <!DOCTYPE HTML>
 <html>
 		<head>
-			<title>Java script</title>
-			<script src="js/funcoes.js"></script>
-			<link rel="stylesheet" type="text/css" href="css/style.css">
+			<title>Formulário aula JS</title>
+		 <link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/form.js"></script>
 		</head>
-				<body>
-				<input type="text" id="num1" name="num1">
-				<input type="text" id="num2" name="num2">
-				<button id="botao_imagem" onclick="trocaImagem()">Imagem 1</button>
-				<button id="botao_imagem" onclick="imagemTroca()">Imagem 2</button>
-				<img id="myImage" src="img/js-logo-badge-512.png"style="width:100px">
-				<p id="demo">Mudando o estilo de um elemento html</p>
-				<button id="botao_imagem" onclick="trocaFonteMaior()">Aumentar Fonte</button>
-				<button id="botao_imagem" onclick="trocaFontemenor()">Diminuir Fonte</button>
-				<button id="botao_imagem" onclick="OlcutarElemento()">Ocultar Elemento</button>
-				<button id="botao_imagem" onclick="naoolcultarElemento()">Nao olcutar Elemento</button>
-				<button id="botao_imagem" onclick="calcular()">calcular</button>
-				
-				</body>
+		<body>
+			<div id="form">
+				<form action="">
+				Nome:<br><input type="text" name="nome" value="" size="35" pattern="[a-z/s]+$" required="yes"><br>
+				Sobrenome:<br><input type="text" name="sobrenome" value="" size="35" pattern="[a-z/s]+$" required="yes" ><br>
+				Sexo:<br> 
+				Masculino<input type="radio" name="sexo" value="masculino"> Feminino<input type="radio" name="sexo" value="feminino"><br>
+				Qual o ano do seu nascimento?<br>
+				<input type="button" id="bntCarregar" onclick="ano()" value="Carregar combobox" />
+				<select name="data_nasc" id="data_nasc">
+				</select><br>
+				Qual a data do seu aniversário?<br>
+				<input type="date" name="data_aniversario"><br>
+				Assinale os itens de maior consumo:<br>
+				<input type="checkbox" name="chocolate" value="chocolate" > Chocolate<br>
+				<input type="checkbox" name="refrigerante" value="refrigerante" > Refrigerante<br>
+				Digite o seu e-mail:<br>
+				<input type="email" name="email"><br>
+				Digite uma mensagem:<br>
+				<textarea name="message" rows="10" cols="30"></textarea><br><br>
+				<input type="submit" value="Enviar">
+				</form>
+			</div>
+		</body>
 </html>
